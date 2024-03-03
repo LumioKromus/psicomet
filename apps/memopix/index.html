@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEMOPIX</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body class="gameBody">
+    <!-- PANTALLA DE BIENVENIDA-->
+    <div class="screen" id = "welcome" style="display: none;">
+      <p class="texto" id="score"></p>
+      <P id="title">MEMOPIX</P>
+      <p class="texto">Memorice la seguencia de objetos para ganar puntos</p>
+      <button onclick="changeScreen('icons')">Jugar!</button><br>     
+      <button onclick="backToList()">Regresar</button><br>
+       <button onclick="resetScore()">Reiniciar puntaje</button>      
+    </div>
+
+    <!-- PANTALLA DE ICONOS-->
+
+    <div class="screen" id="icons" style="display: none;">
+      <img id="icon" src="icons/wait.gif" width="200" height="200">
+      <br>
+      <br>
+      <button onclick="reloadPage()">Regresar</button>
+    </div>
+
+    <!-- PANTALLA DE SELECCION DE ICONOS-->
+
+    <div class="screen" id="selectIcons" style="display: none;">
+
+      Seleccione los iconos en la <br>
+      secuencia correspondiente: <br><br>
+
+      <table>
+        <tr>
+            <td><button onclick="addIcon('arrow')" class="boton"><img id="icon" src="icons/arrow.png" width="50" height="50"></button></td>
+            <td><button onclick="addIcon('book')"  class="boton"><img id="icon" src="icons/book.png" width="50" height="50"></button></td>
+            <td><button onclick="addIcon('candy')"  class="boton"><img id="icon" src="icons/candy.png" width="50" height="50"></button></td>
+        </tr>
+        <tr>
+          <td><button onclick="addIcon('cup')"  class="boton"><img id="icon" src="icons/cup.png" width="50" height="50"></button></td>
+          <td><button onclick="addIcon('diamond')"  class="boton"><img id="icon" src="icons/diamond.png" width="50" height="50"></button></td>
+          <td><button onclick="addIcon('fruit')"  class="boton"><img id="icon" src="icons/fruit.png" width="50" height="50"></button></td>
+        </tr>
+        <tr>
+          <td><button onclick="addIcon('key')" class="boton"><img id="icon" src="icons/key.png" width="50" height="50"></button></td>
+          <td><button onclick="addIcon('potion')"  class="boton"><img id="icon" src="icons/potion.png" width="50" height="50"></button></td>
+          <td><button onclick="addIcon('sword')"  class="boton"><img id="icon" src="icons/sword.png" width="50" height="50"></button></td>
+      </tr>
+    </table>
+
+      <br>
+      <br>
+      <button onclick="reloadPage()">Regresar</button>
+      <button onclick="changeScreen('results')">Continuar</button>
+    </div>
+
+    <!-- PANTALLA DE RESULTADOS-->
+    <div class="screen" id = "results" style="display: none;">
+      <P id="emojiMsg" style="font-size: 4rem;"></P>
+      <P id="resultMsg"></P>
+      <p id="texto"></p>
+      <button onclick="changeScreen('welcome')">Continuar</button>      
+    </div>
+    
+    
+</body>
+
+<script>
+
+document.addEventListener("DOMContentLoaded", readyFunc);
+
+const iconsPack = ['arrow.png', 'book.png', 'candy.png', 'cup.png', 'diamond.png', 'fruit.png', 'key.png', 'potion.png', 'sword.png'];
+
+var activeScreen;
+var score = 1;
+var userScore;
+var availableIcons = [];
+var level = 1;
+var counter = 0;
+var selectedIcons = [];
+
+function resetScore(){
+  localStorage.setItem('savedScore', "1");
+  window.location.reload();
+}
+
+function readyFunc(){
+
+  if (localStorage.getItem('savedScore') !== null){
+    score = +localStorage.getItem('savedScore');
+  }else{
+    score = 1;
+  }
+
+
+
+  
+  changeScreen("welcome");
+  //changeScreen("icons");
+  //changeScreen("selectIcons");
+  //changeScreen("results");
+}
+
+function clearDivs(){
+  document.getElementById("welcome").style.display = 'none';
+  document.getElementById("icons").style.display = 'none';
+  document.getElementById("selectIcons").style.display = 'none';
+  document.getElementById("results").style.display = 'none';
+}
+
+function backToList(){
+  window.location.href = "../../page03.html"
+}
+
+function reloadPage(){
+  window.location.reload();
+}
+
+async function changeScreen(val){
+
+  userScore = score -1;
+  if (val == "welcome"){
+    activeScreen = "welcome";
+    availableIcons = []
+    selectedIcons = []
+    counter = 0
+    clearDivs();
+    document.getElementById("welcome").style.display = 'block';
+    document.getElementById("welcome").style.backgroundColor = "goldenrod";
+    document.getElementById("score").innerText = "Puntaje: " + String(userScore);
+
+  }
+
+  if (val == "icons")  {
+    activeScreen = "icons";
+    clearDivs();
+    document.getElementById("icon").src = "icons/wait.gif"
+    document.getElementById("icons").style.display = 'block';
+    document.getElementById("icons").style.backgroundColor = "goldenrod";
+    await new Promise(resolve => setTimeout(resolve, 1000)); // 3 sec
+
+    buildArray()
+    loadIcons()
+    }
+
+  if (val == "selectIcons")  {
+    activeScreen = "selectIcon";
+    clearDivs();
+    document.getElementById("selectIcons").style.display = 'block';
+    }
+
+  if (val == "results")  {
+    activeScreen = "results";
+    clearDivs();
+    document.getElementById("results").style.display = 'block';
+
+    if (sonIguales(selectedIcons, availableIcons)){
+        document.getElementById("emojiMsg").innerText = "😀";
+        document.getElementById("resultMsg").innerText = "Felicitaciones!";
+        score += 1;
+      }else{
+        document.getElementById("emojiMsg").innerText = "😕";
+        document.getElementById("resultMsg").innerText = "La lista no es correcta";
+      }
+      localStorage.setItem('savedScore', String(score));
+      
+
+
+
+    }
+    console.clear();
+    console.log(activeScreen);
+
+  }
+
+function sonIguales(array1, array2) {
+    // Verificar si los arrays tienen la misma longitud
+    if (array1.length !== array2.length) {
+        return false;
+    }
+
+    // Comparar cada elemento en el mismo índice
+    for (let i = 0; i < array1.length; i++) {
+        if (array1[i] !== array2[i]) {
+            return false; // Si algún elemento no coincide, los arrays no son iguales
+        }
+    }
+
+    return true; // Si llegamos aquí, los arrays son iguales
+}
+
+function buildArray(){
+  function shuffleArray(array) {
+    return array.sort(() => Math.random() - 0.5);
+  }
+  const shuffledIcons = shuffleArray(iconsPack);
+  availableIcons = shuffledIcons.slice(0, score);
+}
+
+async function loadIcons (){
+  while (counter < score){
+
+    if (activeScreen !== "icons") {
+    break;
+  }
+
+    document.getElementById("icon").src = 'icons/' +  availableIcons[counter]
+    await new Promise(resolve => setTimeout(resolve, 1000)); // 3 sec
+    counter += 1
+  }
+  if (counter = score && activeScreen == "icons"){
+    await new Promise(resolve => setTimeout(resolve, 1000)); // 3 sec
+    changeScreen("selectIcons");
+  }
+}
+
+function addIcon (val){
+  selectedIcons.push(val + ".png")
+
+}
+
+</script>
+
+</html>
+
+<!-- 
+comentar varias lineas = ctrl + k + c
+descontentar lineas = ctrl + k + u 
+
+emojipedia.org
+
+-->

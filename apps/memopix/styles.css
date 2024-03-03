@@ -1,0 +1,124 @@
+@font-face {
+    font-family: 'Fuente1';
+    src: local('Fuente1'), url("../../fonts/origami.ttf");
+  }
+
+@font-face {
+    font-family: 'Fuente2';
+    src: local('Fuente2'), url("../../fonts/pxlxxl.ttf");
+  }
+
+.gameBody {
+    font-family: 'Fuente1', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: rgb(60, 19, 172); /* Puedes ajustar el color de fondo según tus preferencias */
+}
+
+.listBody {
+  font-family: 'Fuente2', sans-serif;
+  font-size: larger;
+  color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Ajusta la altura al 100% del viewport */
+  margin: 0; /* Elimina el margen predeterminado del body */
+  background-color: rgb(60, 19, 172); /* Puedes ajustar el color de fondo según tus preferencias */
+}
+
+
+
+.screen {
+    background-color: white;
+    text-align: center;
+    max-width: 100%;
+    border: 2px solid #000; /* Grosor y color del borde */
+    display:block;
+    padding: 2rem;
+    padding-top: 0.5rem;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+img {
+    image-rendering: pixelated;
+}
+
+#resultMsg {
+    font-size: 1.5
+    rem;
+    font-style: normal;
+}
+
+#title {
+  font-size: 3rem;
+  font-style: normal;
+}
+
+.texto {
+    font-family: Fuente2;
+    font-size: 2rem;
+    padding: 0%;
+}
+
+
+table {
+    width: 100%;
+    height: 100%;
+    border-collapse: collapse;
+  }
+
+  table, th, td {
+    border: 0px solid #000; /* Borde para visualización */
+  }
+
+  th, td {
+    width: 33.33%; /* Cada celda ocupa un tercio del ancho */
+    text-align: center;
+
+  }
+
+button {
+  font-size:2rem;
+  font-family: Fuente2;
+  padding: 0px 10px; /* 5 píxeles de relleno arriba/abajo, 10 píxeles de relleno izquierda/derecha */
+  margin: 5px; /* 5 píxeles de margen en todos los lados */
+  border: 0px solid #ccc; /* Borde para visualización */
+  background-color: #f0f0f0; /* Color de fondo */
+  }
+
+button:hover {
+  background-color: #b24ab6; /* Nuevo color de fondo cuando el mouse está sobre el botón */
+}
+
+.boton {
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+    border: none;
+    cursor: pointer;
+}
+
+.boton img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: auto;
+    padding: 0.3rem;
+    background-color: transparent;
+}
+
+.boton:hover {
+  background-color: #2980b9; /* Nuevo color de fondo cuando el mouse está sobre el botón */
+}
+
+.boton:focus {
+  background-color: #2980b9; /* Nuevo color cuando el botón está siendo presionado */
+}

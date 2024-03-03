@@ -1,0 +1,192 @@
+﻿/* SELECTOR UNIVERSAL */
+
+* {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* SELECTORES DE ELEMENTOS */
+
+html { 
+  font-size: 100%; 
+  font-family: Arial, Helvetica, sans-serif;
+}
+body { padding: 1rem; }
+
+button {
+  border-radius: 5%;
+}
+
+button:hover {
+  background-color:cornflowerblue
+}
+
+
+.header {
+background-color: white;
+color: black;
+margin: auto;
+text-align: center;
+}
+
+.footer {
+
+  background-color: cornflowerblue;
+  color: white;
+  text-align: center;
+  font-size: small;
+}
+
+.sesionesOnline {
+text-align: left;
+padding: 5%;
+padding-top: 0%
+};
+
+.centeredtable {
+  margin: 0 auto; /* Centra la tabla dentro del div */
+}
+
+
+
+/* divs grandes */
+
+.cards {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  gap: 0.5rem;
+  
+}
+
+.card {
+  border-radius: 3%;
+  padding: 1rem;
+  margin:0.5rem;
+  height: auto;
+
+}
+
+  @media (min-width: 600px) {
+    .cards { grid-template-columns: repeat(2, 1fr); }
+  }
+
+/* divs chicos */
+
+.lcards {
+  max-width: 1200px;
+  margin: auto;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.lcard {
+    border-radius: 3%;
+    padding: 1rem;
+    height: 4rem;
+    height: auto
+  }
+  
+  @media (min-width: 900px) {
+    .lcards { grid-template-columns: repeat(3, 1fr); }
+  }
+
+  /* singleDiv */
+
+  .singleDiv {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    background-color: white;
+    padding: 0.1rem;
+    height: auto;
+  }
+
+  .logo {
+    height: 5rem;
+    width: 5rem;
+  }
+
+  .quoteTitle {
+    text-align: left;
+    color:white;
+    font-size: 1.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+  }
+
+  .quote {
+    text-align:center;
+    color:white;
+    font-size: 2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+    
+  }
+
+  .authorQuote {
+    text-align:right;
+    color:white;
+    font-size: 2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+    
+  }
+  
+  .littleLogo {
+    height: 2rem;
+    width: 2rem;
+  }
+
+  /* selectores universales */
+
+  h1 {
+    margin: 0;
+    font-size: 3rem;
+    
+  }
+
+  h2 {
+    margin: 0;
+    font-size: 1rem;
+  }
+
+  img {
+    width: 100%; /* La imagen ocupará el 100% del ancho del contenedor */
+    height: auto
+  }
+
+  .fitInput {
+    width: 100%;
+    min-height: 50px;
+    resize: none;
+  }
+
+div a { /* para que los links de los divs no esten subrayados */
+  text-decoration: none;
+  color: initial;
+}
+
+.btn {
+  color: white;
+  background-color:green;
+  padding: 1rem;
+}
+
+#contactForm{
+  background-color:lightseagreen;
+  padding: 1rem;
+  display:inline-block
+
+}
+
+input, textarea {
+  background-color: white;
+}
+
+
+  /*
+  html { font-size: 100%; } >> esto lo defino al inicio
+  lo anterior equivale al tamaño de fuente de la configuración del navegador, cuyo valor predeterminado suele ser de 16px:
+  em es igual a una unidad font-size, en este caso, a 16px
+  , "em" es una unidad de medida que representa la altura de la letra "M" en un tipo de fuente específico.
+  rem >> significa root em y hace referencia al em que se definio al inicio en html { font-size: 100%; }
+  conviene usar siempre rem para no hacerce quilombo y em en casos especificos
+  */

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <title>Psicomet - Psicoterapia Online</title>
+  <meta name="robots" content="noindex, nofollow">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="images/logo.png" type="image" sizes="512x512">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <!-- main script -->
+  <script>
+    $(document).ready(function() {
+      // pre cargar cotenido
+      $('#headerDiv').load('include/header.html');
+      $('#footerDiv').load('include/footer.html');
+      $('#backArrow').load('include/content.html #backArrow');
+
+    });
+  </script>
+</head>
+
+<body>
+  <div id="backArrow"></div>
+  <div id="headerDiv"></div>
+ 
+    <div class="sesionesOnline">
+      <h3>Como realizar una primera sesión Online?</h3>
+
+      <!-- CONTENIDO PARA PC-->
+      <div id="fromPc" style="display: none;">
+        <p>
+          Tómese el tiempo necesario para leer todo el contenido de la presente página. Luego ingrese su nombre, país de origen, número de teléfono celular completo (con característica) y presione el botón iniciar consulta.<br>
+          Alternativamente puede contactarse mediante WhatsApp al siguiente número: +5493517570507 (Córdoba - Argentina)
+        </p>
+        <div id="contactForm">
+          <form action="msgs.php" method="post">
+            <input type="hidden" name="who" value="secondaryForm">
+            <label for="nombre">Nombre:</label><br>
+            <input type="text" id="nombre" name="nombre" maxlength="60"><br><br>
+        
+            <label for="pais">País:</label><br>
+            <input type="text" id="pais" name="pais" maxlength="60"><br><br>
+        
+            <label for="telefono">Teléfono Celular:</label><br>
+            <input type="text" id="telefono" name="telefono" maxlength="60"><br><br>
+        
+            <input type="submit" value="Enviar Consulta">
+          </form>
+      </div>
+      </div>
+      <!-- FIN DE CONTENIDO PARA PC-->
+      <!-- CONTENIDO PARA CELULAR-->
+      <div id="fromCel" style="display: none;">
+        <p>
+          Tómese el tiempo necesario para leer todo el contenido de la presente pagina. Luego presione el botón verde para contactarse directamente con un psicólogo profesional mediante WhatsApp y coordinar un horario para su primera sesión.
+          Las sesiones Online se realizan mediante Google Meet.
+        </p>
+        <form action="https://wa.me/5493517570507">
+          <button class="btn">Presiona aquí para acceder a una psicoconsulta Online</button>
+        </form>
+      </div>
+      <!-- FIN DE CONTENIDO PARA CELULAR-->
+      <script>
+        // Función para verificar si el dispositivo es un celular
+        function esCelular() {
+          return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+        }
+    
+        // Mostrar el div correspondiente basado en el tipo de dispositivo
+        if (esCelular()) {
+          document.getElementById('fromCel').style.display = 'block';
+        } else {
+          document.getElementById('fromPc').style.display = 'block';
+        }
+      </script>
+
+      <h3> Qué es la Psicoterapia breve Online?</h3> 
+      <p>
+        La psicoterapia breve Online es un tratamiento psicológico integrado por un conjunto de 10 sesiones orientadas a fortalecer los recursos y habilidades de los consultantes con el objetivo de mejorar su calidad de vida.
+        Se abordan situaciones relacionadas al estrés, ansiedad, depresión, resolución de problemas y regulación emocional, entre otros.
+        La psicoterapia breve Online se encuadra dentro de la perspectiva de la Psicología Cognitivo Conductual, enfatizando la relación entre las creencias, la conducta y las emociones. Se tienen en cuenta factores relacionados a la historia de vida, el contexto y las características de la personalidad del consultante para lograr una comprensión del mismo, las circunstancias que atraviesa y los desafíos de vida por los que transita.
+        La psicoterapia breve Online se focaliza en la solución de problemas específicos y definidos desde las primeras sesiones a través de un trabajo conjunto entre el terapeuta y el consultante. De este modo, se intenta dar respuestas concretas a necesidades muy acotadas y bien definidas.
+        Esta modalidad terapéutica tiene por objetivo que el consultante adquiera recursos psicológicos que puedan ser puestos en práctica durante el tratamiento y después del mismo, obteniendo resultados concretos que posibiliten mejorar su calidad de vida. 
+      </p>
+
+      <h3>Cómo funcionan las sesiones?</h3> 
+      <p>
+      Las sesiones son de frecuencia semanal y tienen una duración mínima de 45 minutos y máxima de una hora. Las mismas se realizan a través de Google Meet que se encarga de mantener la privacidad de todos los datos. Google Meet es un servicio de videollamadas que funciona mediante un enlace web desde un celular o computadora y no requiere la instalación de ninguna aplicación o programa.
+      El tratamiento es conducido por un Psicólogo matriculado que guiará al consultante por un proceso de autodescubrimiento y aprendizaje que le permitirá adquirir habilidades adaptadas a sus necesidades específicas.
+      El pago de las sesiones se efectúa a través de Rapipago,  Pago Fácil, Mercadopago, Paypal, Western Union, tarjetas de credito o transferencia bancaria mediante CBU.
+      </p>
+      <h3>Beneficios de la Psicoterapia breve Online:</h3> 
+      <p>
+      Durante los ultimos años, numerosos estudios cientificos han comprobado que los resultados obtenidos en terapias breves Online son igualmente eficaces que los tratamientos presenciales prolongados, para brindar soluciones a un amplio grupo de padecimientos de orden psicologico.
+      A diferencia de los enfoques tradicionales de larga duracion, la psicoterapia breve Online, se propone como un abordaje moderno y cientificamente validado, centrado en objetivos bien definidos, que permite trabajar en pos de resultados concretos en el corto plazo.
+      Aprovechando las posibilidades que brinda la tecnología actual, la psicoterapia breve Online ofrece la oportunidad de acceder a tratamiento psicológico sin la necesidad de asistir presencialmente a un consultorio, solo utilizando una computadora o teléfono celular con conexión a Internet.
+      De este modo, se reducen las dificultades de atención relacionadas a problemas de transporte o falta de tiempo.
+      Muchas personas que viven en lugares en donde no pueden acceder a atención profesional ya sea por limitaciones físicas, psicológicas, o por no dominar el idioma del lugar en donde viven, entre muchas otras razones, se han visto beneficiadas por la psicoterapia Online. Por otro lado, existen personas que eligen este tipo de terapia por una cuestión de gusto y/o comodidad.
+      </p>
+      <h3>Limitaciones de la Psicoterapia breve Online:</h3> 
+      <p>
+      Es necesario aclarar que la psicoterapia breve Online impone un conjunto de limitaciones para determinados trastornos severos que incapacitan gravemente al consultante o determinan la existencia de riesgo (para sí y/o para terceros). También existen trastornos muy específicos en donde pese a no existir gravedad o riesgo, la psicoterapia breve Online no resulta la alternativa más recomendable. Dichos casos podrían requerir abordajes diferentes, más intensivos, prolongados o presenciales.
+      En este sentido, uno de los objetivos de la primera sesión es el de determinar si este tipo de tratamiento se ajusta a las caracteristicas y necesidades del consultante o no.
+      </p>
+      <h3>Requisitos técnicos para llevar a cabo el tratamiento: </h3> 
+      <p>
+      Para que el consultante pueda realizar una psicoterapia breve Online es necesario que posea una conexión a Internet que le permita realizar una videollamada fluida y de calidad aceptable en cuanto a imagen y sonido.
+      </p>
+    </div>
+<div id="footerDiv"></div>
+</body>
+</html>
+
+<!--
+
+  psicosesiones online
+  autoayuda (biblioteca de recursos)
+  entrenamiento mental (juegos de entrenamiento)
+  evaluacion (tests, quiz)
+
+-->

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <title>Psicomet - Servicios</title>
+  <meta name="robots" content="noindex, nofollow">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="images/logo.png" type="image" sizes="512x512">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <!-- main script -->
+  <script>
+    $(document).ready(function() {
+      // pre cargar cotenido
+      $('#headerDiv').load('include/header.html');
+      $('#footerDiv').load('include/footer.html');
+      $('#backArrow').load('include/content.html #backArrow');
+    });
+  </script>
+</head>
+<body>
+    <div id="backArrow"></div>
+    <div id="headerDiv"></div>
+    <div style="
+    height:100vh;
+    padding: 1rem;
+    text-align: center; 
+
+    ">
+      <!-- CONTENIDO PARA PC-->
+      <div id="fromPc" style="display: none;">
+        <p>
+          Para comunicarse con un profesional de la salud mental y recibir información sobre cualquiera de nuestros servicios, ingrese su nombre, país de origen, número de teléfono celular completo (con característica) y presione el botón enviar consulta. <br>Nos contactaremos con usted a la brevedad.<br>
+        </p>
+        <div id="contactForm">
+        <form action="msgs.php" method="post">
+          <input type="hidden" name="who" value="secondaryForm">
+          <label for="nombre">Nombre:</label><br>
+          <input type="text" id="nombre" name="nombre" maxlength="60"><br><br>
+      
+          <label for="pais">País:</label><br>
+          <input type="text" id="pais" name="pais" maxlength="60"><br><br>
+      
+          <label for="telefono">Teléfono Celular:</label><br>
+          <input type="text" id="telefono" name="telefono" maxlength="60"><br><br>
+      
+          <input type="submit" value="Enviar Consulta">
+        </form>
+
+      </div>
+      <br>
+      <p>Alternativamente puede contactarse mediante WhatsApp al siguiente número: +5493517570507 (Córdoba - Argentina)
+
+      </div>
+      <!-- FIN DE CONTENIDO PARA PC-->
+      <!-- CONTENIDO PARA CELULAR-->
+      <div id="fromCel" style="display: none;">
+        <p>
+          Para comunicarse con un profesional de la salud mental mediante WhatsApp y recibir información sobre cualquiera de nuestros servicios, presione el botón iniciar consulta.<br>
+        </p>
+        <form action="https://wa.me/5493517570507">
+          <button class="btn">Iniciar Consulta</button>
+        </form>
+      </div>
+      <!-- FIN DE CONTENIDO PARA CELULAR-->
+      <script>
+        // Función para verificar si el dispositivo es un celular
+        function esCelular() {
+          return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+        }
+    
+        // Mostrar el div correspondiente basado en el tipo de dispositivo
+        if (esCelular()) {
+          document.getElementById('fromCel').style.display = 'block';
+        } else {
+          document.getElementById('fromPc').style.display = 'block';
+        }
+      </script>
+
+  </div>
+    <div id="footerDiv"></div>
+    
+</body>
+</html>

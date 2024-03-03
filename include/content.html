@@ -1,0 +1,204 @@
+<!-- 
+
+  Estructura:
+    - Psicosesiones online
+    - autoayuda
+    - entrenamiento mental
+
+    - evaluacion psicologica integral
+    - consulta de evaluacion psicologica
+
+    - Frase del dia
+    - Contacto
+
+-->
+
+<!-- CONTENEDORES -->
+
+<!--
+NOMBRES DE LOS CONTENEDORES:
+  - psicosesiones
+  - recursos
+  - entrenamiento
+  - evaluacion
+  - orientacion
+  - contacto
+
+
+-->
+
+<a href="page01.html" id="psicosesiones">
+  <div class="lcard">
+    <strong><center>PSICOSESIONES ONLINE</center></strong>
+    <br>
+    <img src="images/image3.jpg">
+    <br><br>
+    ¡Bienvenido a nuestro espacio de apoyo psicológico en línea, dedicado a enriquecer tu calidad de vida! Aquí, te conectamos con especialistas calificados que te brindarán sesiones de psicología en línea. Nuestro compromiso es acompañarte en tu camino hacia el bienestar emocional y mental, ofreciéndote un espacio seguro para explorar tus inquietudes y trabajar en soluciones constructivas. Descubre cómo la orientación profesional puede potenciar tu vida diaria. ¡Empieza a transformar tu bienestar emocional hoy y toma el control de tu felicidad y armonía mental!
+  </div>
+</a>
+
+<a href="page02.html" id="recursos">
+  <div class="lcard"><strong>
+    <center>RECURSOS ONLINE</center></strong>
+    <br>
+    <img src="images/image1.jpg">
+    <br><br>
+    En esta sección encontrarás distintos recursos relacionados al bienestar emocional y el desarrollo personal. Podrás acceder a sitios web informativos, blogs y articulos especializados, aplicaciones y videos, entre muchos otras herramientas.
+    Empodérate con conocimientos clave para mejorar tu salud mental. Juntos, navegaremos por un camino de aprendizaje y crecimiento.
+  </div>
+</a>
+
+<a href="page03.html" id="entrenamiento">
+  <div class="lcard">
+    <strong><center>ENTRENAMIENTO MENTAL</center></strong>
+    <br>
+    <img src="images/image2.jpg">
+    <br><br>
+    Te damos la bienvenida a nuestra sección de herramientas cognitivas en línea, diseñada para fortalecer y evaluar tu agilidad mental. Aquí te ofrecemos una selección minuciosa de aplicaciones interactivas destinadas a potenciar habilidades cognitivas clave, como memoria, concentración, lógica y mucho más. Estos desafiantes ejercicios pondrán a prueba tu cerebro y te ayudarán a mejorar en áreas importantes. Prepárate para impulsar tu rendimiento cognitivo y alcanzar tu máximo potencial. ¡Comienza tu viaje hacia una mente más ágil y poderosa hoy mismo!
+  </div>
+</a>
+
+<a href="page04.html" id="evaluacion">
+  <div class="lcard">
+    <strong><center>EVALUACION PSICOLOGICA INTEGRAL</center></strong>
+    <br>
+    <img src="images/image4.jpg">
+    <br><br>
+    Conocete a ti mismo!
+    En un proceso de 5 sesiones Online, de una duración de 45 minutos cada una, nuestros profesionales de la salud mental aplican un conjunto de tests psicológicos científicamente validados para ayudarte a emprender un camino de autoconocimiento y superación personal. En este proceso se exploran los aspectos más fundamentales de tu personalidad, sus características únicas, sus fortalezas y debilidades. Se evalúan patrones cognitivos, emocionales y conductuales, con la finalidad de ayudarte a mejorar tu calidad de vida. Descubre una versión más saludable y equilibrada de ti mismo a través de nuestra evaluación psicológica integral. 
+   
+  </div>
+</a>
+
+<a href="page04.html" id="orientacion">
+  <div class="lcard">
+    <strong><center>CONSULTA DE ORIENTACIÓN PSICOLÓGICA</center></strong>
+    <br>
+    <img src="images/image5.jpg">
+    <br><br>
+    En una consulta psicológica de sesión única, nuestros profesionales de la salud mental están aquí para brindarte orientación experta. Realizamos una evaluación general, identificamos tus necesidades y te ofrecemos información sobre los recursos, herramientas y técnicas necesarias para mejorar tu calidad de vida. En caso de ser necesario, te recomendamos tratamientos personalizados, que pueden incluir psicoterapia, programas de reducción del estrés, entrenamiento en habilidades psicosociales, comunicación, y más. Comienza tu camino hacia el bienestar y la superación. Tu salud mental es nuestra prioridad.  </div>
+</a>
+
+<div id="cont6">
+  <div class="card" style="text-align: center; background-color:lightskyblue; align-items: center; display: flex;">
+    <div class="quotes">
+    <div class="quotetitle">Frase del día:</div>
+    <br>
+    <div class="quote">"La verdadera libertad es poder decir la verdad."</div>
+    <br>
+    <div class="authorQuote">Abraham Maslow</div>
+    </div>
+    
+  </div>
+</div>
+
+<div id="contacto">
+  <div class="card" style="background-color: lightblue;">
+    <h2>Contacto</h2>
+    <br>
+    <form action="msgs.php" method="post">
+      <input type="hidden" name="who" value="mainForm">
+      <label for="nombre">Nombre:</label><br>
+      <input type="text" id="nombre" name="nombre" maxlength="50"><br>
+      <label for="email">Email:</label><br>
+      <input type="email" id="email" name="email" maxlength="50"><br>
+      <br>
+      <label for="comentario">Mensaje:</label><br>
+      <textarea id="mensaje" name="mensaje" rows="4" class="fitInput" maxlength="500"></textarea><br>
+      <br>
+      <input type="submit" value="Enviar mensaje">
+  </form>
+  </div>
+
+</div>
+
+
+<!-- ELEMENTOS -->
+
+<div id="backArrow" style="
+pointer-events:none;
+padding: 1rem;
+position: fixed;
+width: 100%;
+height: 100%;
+display: flex;
+flex-wrap: wrap-reverse;
+flex-direction: row-reverse;
+">
+<div style="
+    pointer-events:all;
+    width:80px;
+    height:80px;
+    position: absolute;">
+    <a href="index.html"><img src="images/back.png" class="littleLogo"></a>  
+</div>
+</div>
+
+
+<!-- RECURSOS -->
+
+<a href="https://www.youtube.com/@AprendemosJuntos" id="resource1">
+  <div class="lcard"><strong>
+    <center>Aprendemos Juntos 2030</center></strong>
+    <br>
+    <img src="https://yt3.googleusercontent.com/dNbCBltXI89osf8lv7U4R-zjsb-OHMXOkdRv03Sqq7zipdGKoGQB3dLhkXsRYNqz0I3SsPaGUsg=s900-c-k-c0x00ffffff-no-rj">
+    <br><br>
+    Contenidos universales, prácticos y sencillos con vídeos de alta calidad, infografías y guías explicativas para ayudar a docentes, familias y educadores a enseñar a niñas y niños a cuidarse a sí mismos, mejorar el planeta y respetar a los demás.
+    La sostenibilidad es el gran reto del siglo XXI. Poner en práctica hábitos sostenibles nos ayuda a mejorar la calidad de vida, a fortalecer los lazos de la sociedad, y nos brinda la esperanza de conseguir un futuro mejor. Un compromiso que se puede alcanzar con pequeñas acciones en nuestro día a día.
+  </div>
+</a>
+
+<a href="https://www.youtube.com/@LibrosMaestros" id="resource2">
+  <div class="lcard"><strong>
+    <center>Libros Maestros</center></strong>
+    <br>
+    <img src="https://yt3.googleusercontent.com/mWXb4UD8_sDY6lu2KUr4aD9OK7Wy7AChK_qkpHu362DVuphK9LU2PNoHI85x-PCiWLX4MZEE=s900-c-k-c0x00ffffff-no-rj">
+    <br><br>
+    En Libros Maestros encontrarás resúmenes de los mejores libros de desarrollo y crecimiento personal. Aquí desglosamos y analizamos los libros más influyentes que han cambiado vidas y transformado mentes, proporcionándote las claves para desbloquear tu potencial ilimitado.
+    Desde los clásicos hasta las últimas novedades, exploramos una amplia gama de géneros dentro del desarrollo personal, incluyendo productividad, mindfulness, finanzas personales y mucho más. No solo te ofrecemos resúmenes concisos y precisos, sino también análisis profundos de temas, lecciones aprendidas y citas inspiradoras de cada libro.
+    
+  </div>
+</a>
+
+<a href="https://www.youtube.com/@WalterRisoOficial" id="resource3">
+  <div class="lcard"><strong>
+    <center>Walter Riso</center></strong>
+    <br>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTf8JGVt2FPWQasCR7EMi7UZABviRxuR0CuA&usqp=CAU">
+    <br><br>
+    Walter Riso nació en Italia (Nápoles). Es Doctor en psicología, especialista en Terapia Cognitiva y Magister en Bioética. Hace treinta años trabaja como psicólogo clínico y formador de terapeutas, práctica que alterna con el ejercicio de la cátedra universitaria en Latinoamérica y España, y la publicación de textos científicos y de divulgación, en diversos medios.
+    Ha sido cofundador de Formar (Centro de investigación y Terapia del comportamiento) y del C.E.A.P.C. (Centro de Estudios Avanzados de Terapia Cognitivo-conductual). Actualmente es presidente honorario de la Sociedad Colombiana de Terapia Cognitiva (A.C.O.T.E.C)
+    Ha publicado veinte libros entre textos técnicos y de divulgación. Entre otros: Terapia Cognitiva (Paidos), Depresión: una perspectiva cognitiva (CEAPC), Amar o Depender (Planeta y Océano), Pensar bien,  sentirse bien (Planeta y Océano), Desapegarse sin anestesia (Planeta y Océano), El camino de los sabios (Planeta  y Océano) y Guías Prácticas (Phrónesis).
+  </div>
+</a>
+
+<a href="https://www.youtube.com/@teresabarocom" id="resource4">
+  <div class="lcard"><strong>
+    <center>Teresa Baró</center></strong>
+    <br>
+    <img src="https://yt3.googleusercontent.com/evtJBS7LxF-505-NaILoMEh4RkqT8PY2cDRP27tQVYUgVdT-A1MLorZjqc3DMkm-aSPUdu4j=s900-c-k-c0x00ffffff-no-rj">
+    <br><br>
+    En esta sección encontrarás distintos recursos relacionados al bienestar emocional y el desarrollo personal. Podrás aacceder a sitios web informativos, blogs y articulos especializados, aplicaciones y videos, entre muchos otros recursos.
+    Empodérate con conocimientos clave para comprender mejor tu salud mental. Juntos, navegaremos por un camino de aprendizaje y crecimiento.
+  </div>
+</a>
+
+<a href="https://cinfasalud.cinfa.com/" id="resource5">
+  <div class="lcard"><strong>
+    <center>CINFASALUD</center></strong>
+    <br>
+    <img src="https://pbs.twimg.com/profile_images/1212656175466123265/ZG5aGDjj_400x400.jpg">
+    <br><br>
+    CinfaSalud es tu espacio de salud 2.0. Una web donde encontrar información fiable y segura sobre enfermedades, así como consejos acerca de hábitos de salud para mejorar tu calidad de vida.
+  </div>
+</a>
+
+<a href="https://www.psychologytoday.com/es" id="resource6">
+  <div class="lcard"><strong>
+    <center>PSICHOLOGY TODAY</center></strong>
+    <br>
+    <img src="https://scontent.fcor10-4.fna.fbcdn.net/v/t1.6435-9/208784014_237049281565217_932566331341429559_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=7f8c78&_nc_eui2=AeG4eymsnGQUBchglBH-FLkFQN64CkSzSN9A3rgKRLNI32g6Y0FqkMtOc98cV63fNKCeO9FFPmUs0cYnCnZnnSfh&_nc_ohc=Hgc7Jcrk0e8AX_kYcwc&_nc_ht=scontent.fcor10-4.fna&oh=00_AfBMNiPqWkHLoTF3FEcjfRLTGUZTRNt1mxSrzdCzAHHeog&oe=65922D44">
+    <br><br>
+    Psychology Today (en español, Psicología hoy) es una revista de divulgación psicológica publicada en los Estados Unidos desde 1967 que tambien tiene una versión en español. No es una publicación científica, sino que está dirigida al público general, sin conocimientos académicos o clínicos. En sus páginas, y también en su edición en línea, explican temas relacionados a la psicología y dan consejos sobre cómo llevar una vida mentalmente saludable.
+  </div>
+</a>

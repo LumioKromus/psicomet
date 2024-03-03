@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <title>Psicomet - Recursos Online</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="images/logo.png" type="image" sizes="512x512">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <!-- main script -->
+  <script>
+    $(document).ready(function() {
+      // pre cargar cotenido
+      $('#headerDiv').load('include/header.html');
+      $('#footerDiv').load('include/footer.html');
+      $('#backArrow').load('include/content.html #backArrow');
+
+      $('#cont1').load('include/content.html #resource1');
+      $('#cont2').load('include/content.html #resource2');
+      $('#cont3').load('include/content.html #resource3');
+
+      $('#cont4').load('include/content.html #resource4');
+      $('#cont5').load('include/content.html #resource5');
+      $('#cont6').load('include/content.html #resource6');
+
+    });
+  </script>
+</head>
+<body>
+    <div id="backArrow"></div>
+    <div id="headerDiv"></div>
+    <h3>Recursos Online</h3>
+
+
+    <div class="lcards">
+      <div id="cont1"></div> <!--sesiones-->
+      <div id="cont2"></div> <!--autoayuda-->
+      <div id="cont3"></div> <!--entrenamiento-->
+    </div>
+
+
+
+    <div class="lcards">
+      <div id="cont4"></div> <!--sesiones-->
+      <div id="cont5"></div> <!--autoayuda-->
+      <div id="cont6"></div> <!--entrenamiento-->
+    </div>
+
+
+
+
+
+
+    <div id="footerDiv"></div>
+    
+</body>
+</html>

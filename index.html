@@ -1,0 +1,155 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <title>Psicomet - Psicología Online</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="images/logo.png" type="image" sizes="512x512">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <!-- main script -->
+
+  <!--
+NOMBRES DE LOS CONTENEDORES:
+  - psicosesiones
+  - evaluacion
+  - orientacion
+  - recursos
+  - entrenamiento
+
+  - contacto
+
+-->
+
+  <script>
+    $(document).ready(function() {
+      // pre cargar cotenido
+      $('#headerDiv').load('include/header.html');
+      $('#footerDiv').load('include/footer.html');
+      $('#cont1').load('include/content.html #psicosesiones');
+      $('#cont2').load('include/content.html #evaluacion');
+      $('#cont3').load('include/content.html #orientacion');
+      $('#cont4').load('include/content.html #entrenamiento');
+      $('#cont5').load('include/content.html #recursos');
+      //$('#cont6').load('/include/content.html #cont6');
+      $('#cont7').load('include/content.html #contacto');
+    });
+  </script>
+
+</head>
+
+<body>
+  <div id="headerDiv"></div>
+  
+  <!-- CONTENEDOR DE UNO -->
+
+  <div class="singleDiv">
+Psicomet es una plataforma Online que pone a tu disposición recursos de desarrollo personal y bienestar emocional para que puedas mejorar tu calidad de vida.-
+  </div>
+
+  <!-- CONTENEDOR DE TRES -->
+
+  <div class="lcards">
+    <div id="cont1"></div> <!--sesiones-->
+    <div id="cont2"></div> <!--autoayuda-->
+    <div id="cont3"></div> <!--entrenamiento-->
+  </div>
+
+  <!-- CONTENEDOR DE DOS -->
+
+  <div class="cards">
+    <div id="cont4">aaa</div> <!--evaluacion-->
+    <div id="cont5"></div> <!--consulta-->
+  </div>
+
+  <!-- CONTENEDOR DE DOS -->
+
+  <div class="cards">
+    <div id="cont6">
+
+      <div class="card" style="text-align: center; background-color:rgb(209, 0, 129); align-items: center; display: flex;">
+        <div class="quotes">
+
+          <div><p style="text-align: left;" class="quoteTitle">Frase del día:</p></div>
+          <div><p class="quote" id = "phraseText"></p></div>
+          <div><p class="authorQuote" id = "authorText"></p></div>
+
+          
+        </div>
+        
+      </div>
+    </div> <!--frase-->
+    <div id="cont7"></div> <!--contacto-->
+  </div>
+
+<!-- CONTENEDOR DE UNO -->
+
+  <div id="footerDiv"></div>
+
+  <script>
+
+// Ruta del archivo JSON
+const filePath = 'apps/phrases/phrases.json';
+
+// Variable para almacenar las frases cargadas desde el archivo JSON
+let frasesJson;
+
+// Función para cargar el archivo JSON y mostrar una frase aleatoria
+async function cargarYMostrarFraseAleatoria() {
+  try {
+    // Utilizamos fetch para obtener el archivo
+    const response = await fetch(filePath, {
+      headers: {
+        'Content-Type': 'application/json; charset=utf-8'
+      }
+    });
+
+    // Verificamos si la solicitud fue exitosa (código 200)
+    if (!response.ok) {
+      throw new Error('No se pudo cargar el archivo JSON');
+    }
+
+    // Convertimos la respuesta a un objeto JSON
+    frasesJson = await response.json();
+
+    // Obtener una clave aleatoria
+    const claveAleatoria = obtenerClaveAleatoria();
+
+    // Obtener la frase correspondiente
+    const frase = frasesJson[claveAleatoria];
+
+    // Mostrar la frase en los divs
+    document.getElementById('phraseText').innerText = frase.text;
+    document.getElementById('authorText').innerText = `Autor: ${frase.author}`;
+  } catch (error) {
+    console.error('Error al cargar el archivo JSON:', error.message);
+  }
+}
+
+// Función para obtener una clave aleatoria
+function obtenerClaveAleatoria() {
+  const keys = Object.keys(frasesJson);
+  const numeroAleatorio = Math.floor(Math.random() * keys.length);
+  return keys[numeroAleatorio];
+}
+
+// Llamada inicial para cargar el archivo JSON y mostrar una frase aleatoria
+cargarYMostrarFraseAleatoria();
+  </script>
+  <script src="js/app.js"></script>
+</body>
+
+</html>
+
+<!-- control + shift + p >>> emmet wrap with abbreviation  --> 
+<!--  https://travishorn.com/responsive-grid-in-2-minutes-with-css-grid-layout-4842a41420fe -->
+
+<!--
+
+javascript no es un lenguaje con indentacion significativa
+
+
+utf-8 >>>
+
+-->
