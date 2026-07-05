@@ -1,155 +1,256 @@
 ﻿<!DOCTYPE html>
 <html lang="es">
 <head>
-  <title>Psicomet - Psicología Online</title>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="manifest" href="manifest.json">
-  <link rel="icon" href="images/logo.png" type="image" sizes="512x512">
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <link rel="stylesheet" href="style.css">
-  <!-- main script -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow,noarchive">
+<title>PSICOMET</title>
 
-  <!--
-NOMBRES DE LOS CONTENEDORES:
-  - psicosesiones
-  - evaluacion
-  - orientacion
-  - recursos
-  - entrenamiento
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
 
-  - contacto
+body{
+	font:16px system-ui,sans-serif;
+	background:linear-gradient(180deg,#dde7ef,#cfdbe6);
+	color:#2b2b2b;
+	line-height:1.7;
+}
 
--->
+main{
+	max-width:900px;
+	margin:auto;
+	padding:40px 18px;
+}
 
-  <script>
-    $(document).ready(function() {
-      // pre cargar cotenido
-      $('#headerDiv').load('include/header.html');
-      $('#footerDiv').load('include/footer.html');
-      $('#cont1').load('include/content.html #psicosesiones');
-      $('#cont2').load('include/content.html #evaluacion');
-      $('#cont3').load('include/content.html #orientacion');
-      $('#cont4').load('include/content.html #entrenamiento');
-      $('#cont5').load('include/content.html #recursos');
-      //$('#cont6').load('/include/content.html #cont6');
-      $('#cont7').load('include/content.html #contacto');
-    });
-  </script>
+/* tarjetas */
+section{
+	background:linear-gradient(180deg,#fbfbfc,#f3f6f9);
+	padding:28px;
+	margin:26px 0;
+	border-radius:18px;
+	border:1px solid #d3dde6;
+	box-shadow:0 12px 28px rgba(20,40,60,.08);
+}
+
+/* títulos */
+h1,h2{
+	text-align:center;
+	margin-bottom:20px;
+	color:#1f3b4d;
+}
+
+h1{font-size:2.2rem;letter-spacing:1px}
+
+h2{font-size:1.4rem;color:#244b5a}
+
+/* textos */
+p{margin:12px 0;color:#333}
+
+ul{padding-left:20px}
+
+/* acordeones */
+details{
+	border:1px solid #d7e0e8;
+	border-radius:10px;
+	padding:12px;
+	margin:12px 0;
+	background:#eef3f7;
+}
+
+summary{
+	cursor:pointer;
+	font-weight:700;
+	color:#1f3b4d;
+}
+
+/* imagen */
+.foto{
+	width:170px;
+	height:170px;
+	border-radius:50%;
+	margin:20px auto;
+	background:#cfd8df;
+	display:block;
+	object-fit:cover;
+	border:4px solid #d9e6ee;
+}
+
+/* botones */
+.tiktok,.wp{
+	display:inline-block;
+	text-decoration:none;
+	padding:14px 24px;
+	border-radius:30px;
+	font-weight:bold;
+	transition:.2s ease;
+}
+
+/* acento psicomet */
+.tiktok{
+	background:#1f1f1f;
+	color:#fff;
+}
+
+.tiktok:hover{transform:scale(1.03)}
+
+/* verde terapéutico */
+.wp{
+	background:linear-gradient(135deg,#25c06d,#1aa85c);
+	color:#fff;
+	margin-top:20px;
+	box-shadow:0 8px 18px rgba(30,160,90,.25);
+}
+
+.wp:hover{transform:scale(1.03)}
+
+.c{text-align:center}
+
+.accent{
+	color:#1aa85c;
+}
+
+.logo{
+	width:90px;
+	height:90px;
+	border-radius:50%;
+	display:block;
+	margin:0 auto 10px auto;
+	object-fit:cover;
+}
+
+.tiktok {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3em;
+}
+
+.tiktok img {
+    width: 1em;
+    height: 1em;
+}
+
+</style>
 
 </head>
 
 <body>
-  <div id="headerDiv"></div>
-  
-  <!-- CONTENEDOR DE UNO -->
 
-  <div class="singleDiv">
-Psicomet es una plataforma Online que pone a tu disposición recursos de desarrollo personal y bienestar emocional para que puedas mejorar tu calidad de vida.-
-  </div>
+<main>
 
-  <!-- CONTENEDOR DE TRES -->
+<section>
+<img class="logo" src="logo.png" alt="Psicomet">
+<h1>PSICOMET</h1>
 
-  <div class="lcards">
-    <div id="cont1"></div> <!--sesiones-->
-    <div id="cont2"></div> <!--autoayuda-->
-    <div id="cont3"></div> <!--entrenamiento-->
-  </div>
+<p>
+Psicomet es un espacio dedicado a la divulgación de la psicología y a la promoción del bienestar emocional. A través de contenidos basados en la evidencia científica y de un servicio de psicoterapia online, busca acercar el conocimiento psicológico de manera clara, práctica y accesible, contribuyendo a una mejor comprensión de la mente y al cuidado de la salud mental.
+</p>
 
-  <!-- CONTENEDOR DE DOS -->
+</section>
 
-  <div class="cards">
-    <div id="cont4">aaa</div> <!--evaluacion-->
-    <div id="cont5"></div> <!--consulta-->
-  </div>
+<section class="c">
 
-  <!-- CONTENEDOR DE DOS -->
+<h2>Contenidos Audiovisuales</h2>
 
-  <div class="cards">
-    <div id="cont6">
+<p>
+En el canal de TikTok de Psicomet comparto reflexiones y recursos breves sobre psicología, bienestar emocional y desarrollo personal.
+</p>
 
-      <div class="card" style="text-align: center; background-color:rgb(209, 0, 129); align-items: center; display: flex;">
-        <div class="quotes">
+<a class="tiktok" href="https://www.tiktok.com/@psicomet.psi" target="_blank">
+    <img src="tiktokLogo.png" alt="TikTok">
+    @psicomet.psi
+</a>
 
-          <div><p style="text-align: left;" class="quoteTitle">Frase del día:</p></div>
-          <div><p class="quote" id = "phraseText"></p></div>
-          <div><p class="authorQuote" id = "authorText"></p></div>
+</section>
 
-          
-        </div>
-        
-      </div>
-    </div> <!--frase-->
-    <div id="cont7"></div> <!--contacto-->
-  </div>
+<section>
 
-<!-- CONTENEDOR DE UNO -->
+<h2>Psicoterapia Online</h2>
 
-  <div id="footerDiv"></div>
+<p>Proceso psicoterapéutico para mejorar tu bienestar, con enfoque práctico, personalizado y basado en evidencia.</p>
 
-  <script>
+<ul>
+<li>Terapia individual para adultos</li>
+<li>Orientación psicológica online</li>
+<li>Ansiedad, estrés y depresión</li>
+<li>Crecimiento personal y autoestima</li>
+</ul>
 
-// Ruta del archivo JSON
-const filePath = 'apps/phrases/phrases.json';
+<details>
+<summary>¿Qué es la psicoterapia online?</summary>
+<p>
+La psicoterapia online es un tratamiento psicológico estructurado, orientado a fortalecer los recursos personales y habilidades del consultante, con el objetivo de mejorar su calidad de vida. Este enfoque aborda situaciones como el estrés, la ansiedad, la depresión, la resolución de problemas y la regulación emocional, entre otras.<br>
+Se basa en los principios de la Psicología Cognitivo Conductual, integrando conocimientos de neurociencias, y haciendo foco en la relación entre pensamientos, emociones y conductas.<br>
+Durante el proceso terapéutico se consideran la historia de vida, el contexto actual y las características personales de cada consultante, para lograr una comprensión profunda de sus desafíos. Desde las primeras sesiones, se trabaja de manera conjunta en objetivos específicos, definidos con claridad, para dar respuestas concretas a necesidades puntuales.<br>
+El propósito de esta modalidad es que el consultante adquiera herramientas psicológicas prácticas, que pueda aplicar tanto durante el tratamiento como una vez finalizado, promoviendo cambios reales y sostenibles en su vida cotidiana.
+</p>
+</details>
 
-// Variable para almacenar las frases cargadas desde el archivo JSON
-let frasesJson;
+<details>
+<summary>¿Cómo funcionan las sesiones?</summary>
+<p>
+Las sesiones son semanales y tienen una duración de entre 45 minutos y una hora. Se realizan a través de Google Meet, una plataforma segura de videollamadas que garantiza la privacidad de los datos y no requiere instalar ninguna aplicación: solo se necesita un celular o computadora con acceso a Internet.<br>
+El tratamiento está a cargo de un psicólogo matriculado, que acompaña al consultante en un proceso de autodescubrimiento y aprendizaje. A lo largo de este camino, se trabajan habilidades y recursos personalizados según las necesidades específicas de cada persona.<br>
+El pago de las sesiones puede realizarse a través de Rapipago, Pago Fácil, Mercado Pago, Paypal, Western Union, tarjetas de crédito o transferencia bancaria mediante CBU.<br>
+</p>
+</details>
 
-// Función para cargar el archivo JSON y mostrar una frase aleatoria
-async function cargarYMostrarFraseAleatoria() {
-  try {
-    // Utilizamos fetch para obtener el archivo
-    const response = await fetch(filePath, {
-      headers: {
-        'Content-Type': 'application/json; charset=utf-8'
-      }
-    });
+<details>
+<summary>Beneficios</summary>
+<p>
+En los últimos años, diversos estudios científicos han demostrado que la psicoterapia online es tan eficaz como los tratamientos presenciales prolongados para tratar muchos problemas psicológicos.<br>
+A diferencia de otros enfoques tradicionales, la terapia online es un método moderno y validado, que se enfoca en objetivos claros y resultados concretos a corto plazo.<br>
+Gracias a la tecnología, podés acceder a terapia desde cualquier lugar, usando solo una computadora o teléfono con conexión a Internet. Esto elimina dificultades como el transporte o la falta de tiempo.<br>
+Muchas personas que viven en zonas con poco acceso a atención profesional, o que enfrentan barreras físicas, psicológicas o idiomáticas, han encontrado en la terapia online una solución accesible y cómoda.<br>
+Además, hay quienes prefieren esta modalidad por la flexibilidad y privacidad que ofrece.<br>
 
-    // Verificamos si la solicitud fue exitosa (código 200)
-    if (!response.ok) {
-      throw new Error('No se pudo cargar el archivo JSON');
-    }
+</p>
+</details>
 
-    // Convertimos la respuesta a un objeto JSON
-    frasesJson = await response.json();
+<details>
+<summary>Limitaciones</summary>
+<p>
+Es importante aclarar que la psicoterapia online no es recomendada para trastornos severos que afecten gravemente al consultante o que impliquen riesgo para sí mismo o para terceros.<br>
+También hay casos específicos donde, aunque no haya gravedad o riesgo, esta modalidad no es la mejor opción y puede requerir tratamientos más intensivos, prolongados o presenciales.<br>
+Por eso, en la primera sesión se evalúa si este tipo de terapia se ajusta a tus necesidades y características personales.<br>
+</p>
+</details>
 
-    // Obtener una clave aleatoria
-    const claveAleatoria = obtenerClaveAleatoria();
+<details>
+<summary>Requisitos técnicos</summary>
+<p>
+Para realizar la psicoterapia online, es necesario contar con una conexión a Internet estable que permita una videollamada fluida, con buena calidad de imagen y sonido, para que la experiencia sea cómoda y efectiva.
+</p>
+</details>
 
-    // Obtener la frase correspondiente
-    const frase = frasesJson[claveAleatoria];
+</section>
 
-    // Mostrar la frase en los divs
-    document.getElementById('phraseText').innerText = frase.text;
-    document.getElementById('authorText').innerText = `Autor: ${frase.author}`;
-  } catch (error) {
-    console.error('Error al cargar el archivo JSON:', error.message);
-  }
-}
+<section class="c">
 
-// Función para obtener una clave aleatoria
-function obtenerClaveAleatoria() {
-  const keys = Object.keys(frasesJson);
-  const numeroAleatorio = Math.floor(Math.random() * keys.length);
-  return keys[numeroAleatorio];
-}
+<h2>Sobre mí</h2>
 
-// Llamada inicial para cargar el archivo JSON y mostrar una frase aleatoria
-cargarYMostrarFraseAleatoria();
-  </script>
-  <script src="js/app.js"></script>
+<img class="foto" src="foto.jpg" alt="Psicólogo">
+
+<p>
+<b>Lic. Federico Bina (MP:13.107) <br><br></b>
+Soy psicólogo graduado en la Universidad Nacional de Córdoba. Acompaño a jóvenes y adultos en procesos terapéuticos, tanto presenciales como virtuales. En este espacio, centrado en la atención a distancia, ofrezco psicoterapia desde un enfoque basado en la Terapia Cognitivo Conductual, integrada con aportes de las Neurociencias. Mi objetivo es promover el bienestar emocional y facilitar el desarrollo personal a través de un tratamiento eficaz, personalizado y orientado a resultados concretos.
+</p>
+
+</section>
+
+<section class="c">
+
+<h2>Contacto</h2>
+
+<p>¿Querés empezar terapia o tenés alguna consulta?</p>
+
+<a class="wp" href="https://wa.me/+5493517570507" target="_blank">
+Contactame por WhatsApp
+</a>
+
+
+</section>
+
+</main>
+
 </body>
-
 </html>
-
-<!-- control + shift + p >>> emmet wrap with abbreviation  --> 
-<!--  https://travishorn.com/responsive-grid-in-2-minutes-with-css-grid-layout-4842a41420fe -->
-
-<!--
-
-javascript no es un lenguaje con indentacion significativa
-
-
-utf-8 >>>
-
--->
